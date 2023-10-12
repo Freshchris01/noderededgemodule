@@ -3,6 +3,10 @@ The Azure IoT Edge Node-RED Module is a module that can be deployed to Azure IoT
 
 ![Azure IoT Edge Node-RED node](images/screenshot.PNG)
 
+## Build the module
+- Build imae `docker build --pull --rm -f "node-red-contrib-azure-iot-edge-module/Dockerfile.amd64" -t <your-tag>:<your-version> "node-red-contrib-azure-iot-edge-module"`
+- Login to your container registry
+- Push image to registry `docker push <your-tag>:<your-version>`
 ## How to deploy the module
 
 The module is available as an AMD64, ARM64 and ARM32 module. To run the module, deploy an [IoT Edge on Linux](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux) or [Raspberry Pi](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm), and then deploy the respective module (AMD64, ARM64v8 or ARM32V7). Version 1.0.2 of the Node-Red Edge modules now use the offical Node-red docker containers, version 1.1.3-12.
